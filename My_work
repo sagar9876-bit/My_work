@@ -1,1 +1,52 @@
+#include<iostream>
+using namespace std;
 
+class a {
+    // starting class a 
+    public :
+        int number ;
+        string name ;
+        void get_data()
+        {
+            // starting member method 
+            cout<<"Enter roll no. of student"<<endl;
+            cin>>number;
+            if (number == 0) 
+            {
+                return; // Exit if the roll number is 0
+            }
+            cout<<"Enter name of student"<<endl;
+            cin>>name;
+        }
+        void get_info()
+        {
+            cout<<"Name of student is " << name << " & Roll number is " << number <<endl;
+        }
+        
+};
+// End of class a 
+int main(){
+// starting main function
+    for (int i = 0 ; i<=100; i++)
+    {
+        if (i == 0)
+        {
+            cout<<"***On completing student Enter roll number is 0 ***"<<endl;
+        }
+        else
+        {
+            a s1 ;
+            s1.get_data();
+            if(s1.number == 0)
+            {
+                cout<<"There are " << (i-1) << " Student in class "<<endl;
+                break;
+            }
+            else
+            {
+                s1.get_info();
+            }
+        }
+    }
+    return 0 ;
+}
